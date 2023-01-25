@@ -1,0 +1,14 @@
+<div [attr.for]="todo.id" class="container">
+  <del *ngIf="todo.completed; else open">
+    <label [attr.for]="todo.id">{{ todo.title | uppercase }}</label>
+  </del>
+  <ng-template #open>
+    <label [attr.for]="todo.id">{{ todo.title }}</label>
+  </ng-template>
+  <input
+    [attr.id]="todo.id"
+    type="checkbox"
+    (click)="checkTodo()"
+    [checked]="todo.completed"
+  />
+</div>

@@ -1,0 +1,6 @@
+<h1>Add new todo</h1>
+<form (ngSubmit)="saveTodo()" #form="ngForm">
+  <input id="title" required type="text" name="title" [(ngModel)]="todo.title" placeholder="Todo title" #title="ngModel" [ngClass]="(!title.valid && !title.pristine) ? 'input-error' : ''" />
+  <div [hidden]="title.valid || title.pristine" class="error">Todo title is required</div>
+  <button [disabled]="!form.form.valid" name="submit" type="submit">Save Todo</button>
+</form>

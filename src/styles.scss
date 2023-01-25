@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  height: 2.5rem;
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  background-color: dodgerblue;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #156cc2;
+}
+
+button:disabled {
+  background-color: #a9a9a9;
+  cursor: not-allowed;
+}
